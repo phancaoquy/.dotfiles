@@ -17,18 +17,19 @@ config.default_prog = { '/usr/bin/zsh', '-l' }
 config.color_scheme = 'Catppuccin Mocha'
 
 -- Font
-config.font = wezterm.font 'JetBrainsMono Nerd Font Mono'
+config.font = wezterm.font 'JetBrainsMono Nerd Font'
+config.window_background_opacity = 0.9
 
 -- Background Image
 config.background = {
     {
       source = {
-        File = '/home/carl/Pictures/Saved/pink.png',	
+       	File = '/home/carl/Pictures/Saved/pink.png',	
       },
       repeat_x = 'Mirror',  
       repeat_y = 'NoRepeat',
       hsb = {
-        brightness = 5,
+        brightness = 0.15,
         hue = 1.0,        
         saturation = 1.0, 
       },
