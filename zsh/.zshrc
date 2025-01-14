@@ -15,6 +15,9 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Path to Oh-My-Posh
 export PATH="$PATH:/home/carl/.local/bin"
 
+# Path to Cargo
+export PATH="$PATH:/home/carl/.cargo/bin"
+
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -62,14 +65,18 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
+alias li='eza -G --icons'
 alias l='ls -CF'
+
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
 alias vim='nvim'
 alias c='clear'
+
 
 # Shell integrations
 eval "$(zoxide init zsh)"
@@ -84,4 +91,7 @@ eval "$(oh-my-posh init zsh --config $HOME/dotfiles/ohmyposh/.omp.toml)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Rosi
+export PATH="$HOME/.config/rofi/scripts:$PATH"
 

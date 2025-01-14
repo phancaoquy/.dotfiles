@@ -13,8 +13,11 @@ config.initial_rows = 20
 -- Spawn a fish shell in login mode
 config.default_prog = { '/usr/bin/zsh', '-l' }
 
+-- Window decoration
+config.window_decorations = "RESIZE"
+
 -- Color scheme:
-config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'Tokyo Night'
 
 -- Font
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
@@ -29,7 +32,7 @@ config.background = {
       repeat_x = 'Mirror',  
       repeat_y = 'NoRepeat',
       hsb = {
-        brightness = 0.15,
+        brightness = 0.25,
         hue = 1.0,        
         saturation = 1.0, 
       },
