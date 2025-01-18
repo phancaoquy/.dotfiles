@@ -50,7 +50,7 @@ config.colors = {
     '#B30000', -- maroon
     '#0BF607', -- green
     '#F76807', -- orange
-    '#0569F8', -- navy
+    '#077EF7', -- navy
     '#B560F7', -- purple
     '#70F7EF', -- teal
     '#D0CFCC', -- silver

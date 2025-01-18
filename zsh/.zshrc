@@ -18,6 +18,9 @@ export PATH="$PATH:$HOME/.local/bin"
 # Path to Cargo
 export PATH="$PATH:$HOME/.cargo/bin"
 
+# Path to Golang
+export PATH="$PATH:/usr/local/go/bin"
+
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -77,16 +80,27 @@ alias egrep='egrep --color=auto'
 alias vim='nvim'
 alias c='clear'
 
-
 # Shell integrations
 eval "$(zoxide init zsh)"
-
+# Set up fzf key bindings and fuzzy completion
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 
 # Zsh intergation
 eval "$(oh-my-posh init zsh --config $HOME/dotfiles/ohmyposh/.omp.toml)"
+
+# fnm
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
 
 # Node.js
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Laravel installer
+export PATH="$PATH:$HOME/.config/composer/vendor/bin/"
 
