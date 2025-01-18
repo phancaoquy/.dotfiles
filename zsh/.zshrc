@@ -13,10 +13,10 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Path to Oh-My-Posh
-export PATH="$PATH:/home/carl/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Path to Cargo
-export PATH="$PATH:/home/carl/.cargo/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -85,13 +85,8 @@ eval "$(zoxide init zsh)"
 # Zsh intergation
 eval "$(oh-my-posh init zsh --config $HOME/dotfiles/ohmyposh/.omp.toml)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Node.js
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Rosi
-export PATH="$HOME/.config/rofi/scripts:$PATH"
 
