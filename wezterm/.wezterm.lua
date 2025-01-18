@@ -49,7 +49,7 @@ config.colors = {
     '#000000', -- black
     '#B30000', -- maroon
     '#0BF607', -- green
-    '#15F792', -- olive
+    '#F76807', -- orange
     '#0569F8', -- navy
     '#B560F7', -- purple
     '#70F7EF', -- teal
