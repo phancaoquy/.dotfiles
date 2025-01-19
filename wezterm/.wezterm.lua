@@ -62,7 +62,7 @@ config.colors = {
     '#F78908', -- yellow
     '#0496FA', -- blue
     '#F769ED', -- fuchsia
-    '#70F7EF', -- aqua
+    '#6CB4F8', -- aqua
     '#FFFFFF', -- white
   },
 
