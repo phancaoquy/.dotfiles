@@ -47,7 +47,7 @@ config.colors = {
 
   ansi = {
     '#000000', -- black
-    '#B30000', -- maroon
+    '#FF0000', -- maroon
     '#0BF607', -- green
     '#F76807', -- orange
     '#077EF7', -- navy
@@ -57,12 +57,12 @@ config.colors = {
   },
   brights = {
     '#A0A0A0', -- grey
-    '#FF1A1A', -- red
+    '#FF2C2C', -- red
     '#0BF607', -- lime
     '#F78908', -- yellow
     '#0496FA', -- blue
     '#F769ED', -- fuchsia
-    '#6CB4F8', -- aqua
+    '#7FFFDD', -- aqua
     '#FFFFFF', -- white
   },
 
@@ -109,7 +109,7 @@ config.background = {
       repeat_x = 'Mirror',  
       repeat_y = 'NoRepeat',
       hsb = {
-        brightness = 0.15,
+        brightness = 0.25,
         hue = 1.0,        
         saturation = 1.0, 
       },
