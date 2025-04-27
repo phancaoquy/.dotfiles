@@ -79,6 +79,7 @@ alias egrep='egrep --color=auto'
 
 alias vim='nvim'
 alias c='clear'
+alias pip='pip3'
 
 # Shell integrations
 eval "$(zoxide init zsh)"
@@ -104,3 +105,7 @@ export NVM_DIR="$HOME/.nvm"
 # Laravel installer
 export PATH="$PATH:$HOME/.config/composer/vendor/bin/"
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
