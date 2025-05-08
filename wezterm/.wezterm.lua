@@ -17,6 +17,26 @@ config.default_prog = { '/usr/bin/zsh', '-l' }
 config.window_decorations = "TITLE|RESIZE"
 config.enable_scroll_bar = true
 
+config.keys = {
+ -- Insert
+ { mods = '', key = 'Insert', action = wezterm.action{ SendString = "\0030" } },
+
+ -- Home
+ { mods = '', key = 'Home', action = wezterm.action{ SendString = "\001" } },
+
+ -- Page Up
+ { mods = '', key = 'PageUp', action = wezterm.action{ SendString = "\031" } },
+
+ -- Delete
+ { mods = '', key = 'Delete', action = wezterm.action{ SendString = "\004" } },
+
+ -- End
+ { mods = '', key = 'End', action = wezterm.action{ SendString = "\005" } },
+
+ -- Page Down
+ { mods = '', key = 'PageDown', action = wezterm.action{ SendString = "\032" } },
+}
+
 -- Color scheme:
 config.colors = {
   -- The default text color
@@ -104,7 +124,7 @@ config.window_background_opacity = 0.9
 config.background = {
     {
       source = {
-       	File = '/home/aiden/Pictures/Saved/pink.png',	
+       	File = '/home/phancaoquy/Pictures/Saved/pink.png',	
       },
       repeat_x = 'Mirror',  
       repeat_y = 'NoRepeat',
