@@ -84,11 +84,10 @@ alias pip='pip3'
 # Shell integrations
 eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-source /usr/share/doc/fzf/examples/completion.zsh
+source <(fzf --zsh)
 
 # Zsh intergation
-eval "$(oh-my-posh init zsh --config $HOME/dotfiles/ohmyposh/.omp.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.dotfiles/ohmyposh/.omp.toml)"
 
 # fnm
 FNM_PATH="$HOME/.local/share/fnm"
@@ -97,7 +96,12 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
+#bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # Node.js
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -105,7 +109,8 @@ export NVM_DIR="$HOME/.nvm"
 # Laravel installer
 export PATH="$PATH:$HOME/.config/composer/vendor/bin/"
 
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
