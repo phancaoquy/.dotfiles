@@ -1,5 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -18,23 +19,6 @@ config.window_decorations = "TITLE|RESIZE"
 config.enable_scroll_bar = true
 
 config.keys = {
- -- Insert
- { mods = '', key = 'Insert', action = wezterm.action{ SendString = "\0030" } },
-
- -- Home
- { mods = '', key = 'Home', action = wezterm.action{ SendString = "\001" } },
-
- -- Page Up
- { mods = '', key = 'PageUp', action = wezterm.action{ SendString = "\031" } },
-
- -- Delete
- { mods = '', key = 'Delete', action = wezterm.action{ SendString = "\004" } },
-
- -- End
- { mods = '', key = 'End', action = wezterm.action{ SendString = "\005" } },
-
- -- Page Down
- { mods = '', key = 'PageDown', action = wezterm.action{ SendString = "\032" } },
 }
 
 -- Color scheme:
