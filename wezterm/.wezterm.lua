@@ -102,7 +102,7 @@ config.colors = {
 -- Font
 config.font = wezterm.font('JetBrainsMono Nerd Font')
 config.font_size = 11.0
-config.window_background_opacity = 0.9
+config.window_background_opacity = 1.0
 
 -- Background Image
 config.background = {
@@ -113,7 +113,7 @@ config.background = {
       repeat_x = 'Mirror',  
       repeat_y = 'NoRepeat',
       hsb = {
-        brightness = 0.25,
+        brightness = 0.2,
         hue = 1.0,        
         saturation = 1.0, 
       },
