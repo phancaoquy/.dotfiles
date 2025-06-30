@@ -83,6 +83,7 @@ alias egrep='egrep --color=auto'
 alias vim='nvim'
 alias c='clear'
 alias pip='pip3'
+alias lzd='lazydocker'
 
 # Shell integrations
 eval "$(zoxide init zsh)"

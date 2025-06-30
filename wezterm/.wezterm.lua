@@ -9,14 +9,15 @@ local config = wezterm.config_builder()
 
 -- Initial cols & rows
 config.initial_cols = 80
-config.initial_rows = 20
+config.initial_rows = 22
 
 -- Spawn a fish shell in login mode
 config.default_prog = { '/usr/bin/zsh', '-l' }
 
 -- Window decoration
-config.window_decorations = "TITLE|RESIZE"
-config.enable_scroll_bar = true
+config.window_decorations = "NONE"
+config.enable_scroll_bar = false
+config.enable_tab_bar = false
 
 config.keys = {
 }
