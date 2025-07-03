@@ -40,7 +40,7 @@ type = 'path'
 style = 'plain'
 background = 'transparent'
 foreground = 'p:pink'
-template = '{{ .Path }}'
+template = '{{ .Folder }}'
 
 [blocks.segments.properties]
 style = 'full'
