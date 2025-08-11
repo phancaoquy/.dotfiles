@@ -1,6 +1,5 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local act = wezterm.action
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -18,6 +17,7 @@ config.default_prog = { "/usr/bin/zsh", "-l" }
 config.window_decorations = "NONE"
 config.enable_scroll_bar = false
 config.enable_tab_bar = false
+config.default_cursor_style = "SteadyBar"
 
 config.keys = {}
 
@@ -102,24 +102,9 @@ config.colors = {
 -- Font
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 11.0
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.7
 
 -- Background Image
-config.background = {
-	{
-		source = {
-			File = "/home/phancaoquy/Pictures/Saved/pink.png",
-		},
-		repeat_x = "Mirror",
-		repeat_y = "NoRepeat",
-		hsb = {
-			brightness = 0.2,
-			hue = 1.0,
-			saturation = 1.0,
-		},
-		opacity = 1.0,
-	},
-}
 
 -- and finally, return the configuration to wezterm
 return config
