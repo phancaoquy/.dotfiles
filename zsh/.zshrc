@@ -119,3 +119,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+PATH=~/.console-ninja/.bin:$PATH
