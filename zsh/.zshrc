@@ -90,6 +90,9 @@ eval "$(zoxide init zsh)"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
+# in .zshrc
+export FZF_DEFAULT_OPTS='--color=16,bg:-1,bg+:15,hl:4,hl+:4,fg:-1,fg+:-1,gutter:-1,pointer:-1,marker:-1,prompt:1 --height 60% --reverse --color border:46 --border=sharp --prompt="➤  " --pointer="➤ " --marker="➤ "'
+
 # Zsh intergation
 eval "$(oh-my-posh init zsh --config $HOME/.dotfiles/ohmyposh/.omp.toml)"
 
@@ -117,7 +120,14 @@ export PATH="$PATH:$HOME/.config/composer/vendor/bin/"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# gvm
+[[ -s "/home/phancaoquy/.gvm/scripts/gvm" ]] && source "/home/phancaoquy/.gvm/scripts/gvm"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
